@@ -1,0 +1,152 @@
+
+.container-principal{
+    height: 500px;
+    width: 500px;
+}
+
+.div-contato {
+    background: #1b1b12;
+}
+
+.lbl-titulo{
+    width: 100%;
+    color:#b68809;
+    font-weight: bold;
+}
+
+.lbl-dado{
+    width: 100%;
+    color: white;
+}
+
+footer{
+    padding-top: 12px;
+    text-align: center;
+    height: 70px;
+    background-color: #eeedf3;
+}
+
+.lbl-footer{
+    margin-top: 10px;
+}
+
+.container-funcionarios{
+    min-height: 700px;
+    width: 80%;
+    /*border: 1px solid #1b1b12;*/
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.container-funcionario{
+    width: 350px;
+    border: 1px solid #1b1b12;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.container-usuarios{
+    min-height: 700px;
+    width: 80%;
+
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.container-usuario{
+    width: 350px;
+    border: 1px solid #1b1b12;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.form-titulo{
+    margin-top: 50px;
+    background-color: #eeedf3;
+    text-align: center;
+    border: 1px solid #1b1b12;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-tabela{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.form-novo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: right;
+}
+
+
+.badge-botao{
+    padding:8px;
+}
+
+.tabela-controle{
+    padding: 3px;
+    width: 10px;
+}
+
+.tabela-controle > a{
+    color:#1b1b12;
+}
+
+
+.tabela-controle > a:hover{
+    color:forestgreen;
+}
+
+.tabela-controle-delete{
+    padding: 3px;
+    width: 10px;
+}
+.tabela-controle-delete > a{ 
+    color: #cc1e1e;
+}
+
+.tabela-controle-delete > a:hover{
+    color: #830000;
+}    
+
+.btn-width{
+    width: 49%;
+}
+
+.btn-voltar-width{
+    width: 99%;
+}
+
+input{
+    text-align: center;
+    
+}
+
+
+@media screen and (max-width: 500px){
+    .container-funcionarios{
+        width: 80%;
+    }
+    .container-usuarios{
+        width: 80%;
+    }
+    .container-principal{
+        height: 300px;
+        width: 300px;
+    }
+
+    .form-tabela{
+        overflow-x: scroll;
+    }
+}
