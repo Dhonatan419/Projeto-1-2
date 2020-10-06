@@ -21,9 +21,9 @@ public class UsuarioController {
 	private UsuarioRepository usuarioRepository;
 	 
 	@GetMapping("/usuario/list")
-	public String listFuncionarios(Model model) {
+	public String listUsuarios(Model model) {
 		
-		model.addAttribute("usuarios", usuarioRepository.findAll(Sort.by("id","nome")));
+		model.addAttribute("usuarios", usuarioRepository.findAll(Sort.by("id")));
 		
 		return "usuario/list";
 	}

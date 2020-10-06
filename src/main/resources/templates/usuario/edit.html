@@ -30,6 +30,7 @@
 		</div>
     </nav>
 
+    
     <div class="container-base">
         <div class="container container-usuario">
             <div class="form-titulo">
@@ -50,12 +51,20 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Login</label>
+                    <label>login</label>
                     <input class="form-control" type="text" th:field="${usuario.login}" required>
                 </div>
                 <div class="form-group">
                     <label>Cpf</label>
-                    <input class="form-control" type="text" th:field="${usuario.login}" required>
+                    <input class="form-control" type="text" th:field="${usuario.cpf}" required>
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input class="form-control" id="senha1" type="password" th:field="${usuario.senha}" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirmar senha</label>
+                    <input class="form-control" id="senha2" type="password"  required>
                 </div>
                 
                 <div class="form-group">
