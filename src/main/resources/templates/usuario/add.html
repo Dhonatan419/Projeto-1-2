@@ -53,36 +53,38 @@
 
                 <div class="form-group">
                     <label>Nome</label>
-                    <input class="form-control" type="text" th:field="*{nome}" required>
+                    <input class="form-control" type="text" th:field="*{nome}" placeholder="Nome" required>
                 </div>
 
                 <div class="form-group">
                     <label>Login</label>
-                    <input class="form-control" type="text" th:field="*{login}" required>
+                    <input class="form-control" type="text" th:field="*{login}" placeholder="Login" required>
                 </div>
                 
                 <div class="form-group">
                     <label>Cpf</label>
-                    <input class="form-control" type="text" th:field="*{cpf}" required>
+                    <input class="form-control" type="text" th:field="*{cpf}" required placeholder="Ex:123.456.789-09">
                 </div>
                 
                 <div class="form-group">
                     <label>Senha</label>
-                    <input class="form-control" type="password" id="senha1" th:field="*{senha}" required  th:onblur="verificar()" >
+                    <input class="form-control" type="password" id="senha1" th:field="*{senha}" placeholder="Senha" required th:onkeyup="verificarForcaSenha()" th:onblur="verificar()" >
                 </div>
+
+
                 <div class="form-group">
                     <label>Confirmar Senha</label>
-                    <input class="form-control" type="password" id="senha2" required th:onblur="verificar()"  >
+                    <input class="form-control" type="password" id="senha2" required placeholder="Confirmar Senha" th:onblur="verificar()"  >
                 </div>
                 
 
                 <div class="form-group">
                     <button class="btn btn-secondary btn-width" type="button"
-                        onclick="window.location.href='./list'">
+                        onclick="window.location.href='./list'" >
                         <i class="fa fa-ban" aria-hidden="true"></i> Cancelar
                     </button>
                     <button class="btn btn-success btn-width" type="submit" >
-                        <i class="fa fa-save" aria-hidden="false"></i> Salvar
+                        <i class="fa fa-save" aria-hidden="false" id="btSalvar"></i> Salvar
                     </button>
                 </div>
             </form>

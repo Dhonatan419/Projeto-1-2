@@ -45,12 +45,12 @@
 
                 <div class="form-group">
                     <label>Nome</label>
-                    <input class="form-control" type="text" th:field="*{nome}" required>
+                    <input class="form-control" type="text" th:field="*{nome}" placeholder="Nome" required>
                 </div>
 
                 <div class="form-group">
                     <label>Descrição</label>
-                    <input class="form-control" type="text" th:field="*{descricao}" required>
+                    <input class="form-control" type="text" th:field="*{descricao}" placeholder="Descrição" required>
                 </div>
 
                 <div class="form-group">
@@ -78,29 +78,28 @@
 
                 <div class="form-group">
                     <label>Orçamento</label>
-                    <input type="number" class="form-control" th:field="*{orcamento}" 
-                        required placeholder="R$ 0,00">
+                    <input type="number" class="form-control"  th:field="*{orcamento}" required placeholder="R$ 0,00">
                 </div>
 
 
                 <div class="form-group">
                     <label>Data Início</label>
-                    <input type="date" class="form-control" th:field="*{dataInicio}" required>
+                    <input type="date" class="form-control" th:field="*{dataInicio}" placeholder="Data Início" required>
                 </div>
 
                 <div class="form-group">
                     <label>Data Previsão</label>
-                    <input type="date" class="form-control" th:field="*{dataPrevisao}" required>
+                    <input type="date" class="form-control" th:field="*{dataPrevisao}" placeholder="Data Previsão" required>
                 </div>
 
                 <div class="form-group">
                     <label>Data Final</label>
-                    <input type="date" class="form-control" th:field="*{dataFinal}" required>
+                    <input type="date" class="form-control" th:field="*{dataFinal}" placeholder="Data Final" required>
                 </div>
 
                 <div class="form-group">
                     <label>Gerente</label>
-                    <select th:field="*{gerente.id}" class="form-control" required>
+                    <select th:field="*{gerente.id}" class="form-control" placeholder="Gerente" required>
                         <option th:each="funcionario : ${gerentes}" 
                             th:value="${funcionario.id}"
                             th:text="${funcionario.nome}"> </option>
