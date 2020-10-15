@@ -4,9 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.Size;
 
 import org.springframework.lang.NonNull;
+
+import antlr.collections.List;
 
 @Entity(name = "usuario")
 
@@ -21,16 +27,30 @@ public class Usuario {
 	private String nome;
 	
 	@NonNull
-	@Size(max=50)
-	private String login;
+	@Size(max=100)
+	private String senha;
+	
 	
 	@NonNull
 	@Size(max=50)
-	private String senha;
+	private String login;
+	
 	
 	@NonNull
 	@Size(max=20)
 	private String cpf;
+	
+	
+	private boolean ativo ;
+	
+	@ManyToMany
+	@JoinTable(
+			 name="usuario_permissao",
+			 joinColumns=@JoinColumn(name="usuario_id"),
+			 inverseJoinColumns=@JoinColumn(name="permissao_id") 
+			)
+	
+	private java.util.List<Permissao> permissoes;
 
 	public Long getId() {
 		return id;
@@ -70,6 +90,23 @@ public class Usuario {
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+
+	
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
+	}
+
+	public java.util.List<Permissao> getPermissoes() {
+		return permissoes;
+	}
+
+	public void setPermissoes(java.util.List<Permissao> permissoes) {
+		this.permissoes = permissoes;
 	}
 
 	@Override

@@ -53,7 +53,7 @@ const verificarForcaSenha = function(){
 	mostrarForca(forca);
 }
 
-function mostrarForca(forca){
+const mostrarForca = function(forca){
 	document.getElementById("impForcaSenha").innerHTML = "Força: " + forca;
 
 	if(forca < 30 ){

@@ -29,36 +29,61 @@
 				<a class="nav-item nav-link" th:href="@{/usuario/list}">Usuário</a>
 			</div>
 		</div>
-		<div class="div-login">
-				<button class="btn btn-dark"  th:onclick="|window.location.href='@{/login}'|">
-					<i class="fas fa-sign-in-alt"></i>Entrar
-				</button>
-			</div>
 	</nav>
 
 	<!--CORPO-->
-	<div class="container container-principal">
-		
+	<div class="container container-login">
+	<div th:if="${param.error}" class="alert alert-danger">
+	<button type="button" class="close" data-dismiss="alert">
+	<i class="far fa-times-circle"></i>
+	</button>
+	<h4>Atenção!</h4>
+	<span>Prencha corretamente o usuário e senha.</span>
+	
 		
 	</div>
 
-	<!--CONTATO-->
-	<div class="div-contato">
-		<div class="container">
-			<label class="lbl-titulo">Contato:</label>
-			<label class="lbl-dado">portifolio@portifolio.com</label>
-			<label class="lbl-dado">(48) 98884-1234</label>
+	<!--LOGOUT-->
+	
+	<div th:if="${param.logout}" class="alert alert-warning">
+		<button type="button" class="close" data-dismiss="alert">
+			<i class="far fa-times-circle"></i>
+		</button>
+		<h4>Aviso!</h4>
+		<span>Você saiu do Sistema.</span>
+	</div>
+	
+	<form th:action="@{/login}" method="POST">
 		
+		<div class="form-group form-titulo">
+			<h4>Usuário</h4>
 		</div>
 		
-	</div>
+		
+		<div class="form-group">
+			<input name="username" class="form-control" 
+			placeholder="Login" required/>
+		</div>
+		
+		<div class="form-group">
+			<input name="password" class="form-control" type="password" 
+			placeholder="Senha" required/>
+		</div>
+		
+		<div class="form-group">
+				<button type="submit" class="btn btn-dark">
+					<i class="fas fa-sign-in-alt"></i>
+					Entrar
+				</button>
+			</div>
+			
+			<div class="form-group">
+				<input type="checkbox" id="remember-me" name="remember-me"/>
+				<label class="label-lembrar" for="remeber-me">Lembrar?</label>
+			</div>
+	</form>
 
-	<!--CORPO-->
-	<div>
-	
-	
-	</div>
-
+</div>
 
 	<!--FOOTER-->
 	<footer>

@@ -3,6 +3,14 @@
     height: 500px;
     width: 500px;
 }
+.container-login{
+	width: 50%;
+	margin-top: 100px;
+	margin-bottom: 300px;
+	padding: 10px;
+	border: 1px solid #1b1b12;
+	border-radius: 20px;
+}
 
 .div-contato {
     background: #1b1b12;
@@ -50,8 +58,7 @@ footer{
 }
 .container-usuarios{
     min-height: 700px;
-    width: 80%;
-
+    width: 70%;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -136,12 +143,21 @@ input{
     display: none;
 }
 
-@media screen and (max-width: 500px){
+
+.label-lembrar{
+	font-size: small;
+}
+
+.div-login{
+	text-align: right;
+}
+
+@media screen and (max-width: 500px) and (max-width: 800px){
     .container-funcionarios{
-        width: 80%;
+        width: 100%;
     }
     .container-usuarios{
-        width: 80%;
+        width: 100%;
     }
     .container-principal{
         height: 300px;

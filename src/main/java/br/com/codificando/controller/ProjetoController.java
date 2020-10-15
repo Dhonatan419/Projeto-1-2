@@ -22,8 +22,7 @@ public class ProjetoController {
 	FuncionarioRepository funcionarioRepository;
 	
 	@GetMapping("/projeto/list")
-	public String listProjeto(Model model) {
-		
+	public String listProjeto(Model model) {	
 		model.addAttribute("projetos", projetoRepository.findAll(Sort.by("dataInicio")));
 		return "projeto/list";
 	}
